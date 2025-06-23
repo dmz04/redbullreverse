@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 30px 0;
+  margin: 40px auto;
+  max-width: 1000px;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  color: #111;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.arrow {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.arrow:hover {
+  transform: scale(1.3);
+  color: #c10000;
+}
+
+.carousel-3d {
+  perspective: 1000px;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 200px;
+  overflow: visible;
+}
+
+.carousel-3d .can-name {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #c10000;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s, color 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.carousel-3d .can-name:hover,
+.carousel-3d .can-name:focus {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  outline: none;
+}
+
+.carousel-3d .active {
+  transform: translateZ(150px);
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 5;
+}
+
+.carousel-3d .prev {
+  transform: translateX(-150px) rotateY(45deg);
+  opacity: 0.6;
+  z-index: 3;
+}
+
+.carousel-3d .next {
+  transform: translateX(150px) rotateY(-45deg);
+  opacity: 0.6;
+  z-index: 3;
+}
+
+.fiche {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  background-color: #c10000;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 100;
+  display: none;
+}
+
+.fiche.visible {
+  display: block;
+}
+
+.fiche h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.fiche p {
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #ffdddd;
+}

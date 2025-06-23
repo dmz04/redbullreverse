@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guess Your Red Bull</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="images/logo.png" alt="Red Bull Logo" class="logo" />
+    <h1 class="title">Guess Which Red Bull You Are.</h1>
+    <p class="subtitle">– Not All Wings Are the Same.</p>
+
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="prev()" aria-label="Previous can">&#10094;</button>
+      <div class="carousel-3d" id="carousel3D">
+        <div class="can-name" data-index="0" data-color="#E10600" data-textcolor="white">Original</div>
+        <div class="can-name" data-index="1" data-color="#2F2F2F" data-textcolor="white">Sugarfree</div>
+        <div class="can-name" data-index="2" data-color="#F9A825" data-textcolor="black">Tropical Edition</div>
+        <div class="can-name" data-index="3" data-color="#00B9AE" data-textcolor="white">Coconut Edition</div>
+        <div class="can-name" data-index="4" data-color="#FF4D4D" data-textcolor="white">Watermelon Edition</div>
+        <div class="can-name" data-index="5" data-color="#FFCBA4" data-textcolor="black">Peach Edition</div>
+        <div class="can-name" data-index="6" data-color="#0033A0" data-textcolor="white">Blue Edition</div>
+        <div class="can-name" data-index="7" data-color="#7D5A50" data-textcolor="white">Winter Edition</div>
+        <div class="can-name" data-index="8" data-color="#4CAF50" data-textcolor="white">Green Edition</div>
+      </div>
+      <button class="arrow right" onclick="next()" aria-label="Next can">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- Can Info Modal -->
+  <div id="fiche" class="fiche hidden" role="dialog" aria-modal="true" aria-labelledby="ficheNom">
+    <button id="closeFiche" class="close-btn" aria-label="Close">&times;</button>
+    <h2 id="ficheNom"></h2>
+    <p><strong>When to Drink:</strong> <span id="ficheQuand"></span></p>
+    <p><strong>Occasion:</strong> <span id="ficheOccasion"></span></p>
+    <p><strong>Available In:</strong> <span id="fichePays"></span></p>
+    <p><strong>Fun Fact:</strong> <span id="ficheFunFact"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
